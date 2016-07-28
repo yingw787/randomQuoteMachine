@@ -1,0 +1,40 @@
+p {
+  font-family: 'Indie Flower', cursive;
+}
+
+#tweetButton #newQuoteButton {
+
+}
+
+#buttonDiv {
+
+  text-align: center;
+  /*border: 10px solid black;*/
+  padding-bottom: 5vh;
+
+}
+
+#quoteText {
+  text-align: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  font-size: 40px;
+}
+
+#authorText {
+  text-align: right;
+  padding-right: 5vw;
+  font-size: 25px;
+}
+
+#centerDiv {
+  border-radius: 20px;
+  background-color: #D1DBDD;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 20vh;
+
+  /*border: 10px solid black;*/
+
+}

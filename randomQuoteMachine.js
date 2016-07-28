@@ -21,7 +21,8 @@ function loadQuote(){
   var randomQuote = data[randomQuoteIndex];
 
   var quote = randomQuote.Quote;
-  var author = randomQuote.Author;
+  var author = "-";
+  author += randomQuote.Author;
 
   quoteGlobal = quote;
   authorGlobal = author;

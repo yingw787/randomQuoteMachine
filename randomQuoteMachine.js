@@ -4,7 +4,14 @@ var authorGlobal = "";
 
 $(document).ready(function(){
   getJSONAndLoadQuote();
+
+
+
 });
+
+$(document).on('click', "#tweetButton", function(){
+  retweetQuote();
+})
 
 // works
 function getJSONAndLoadQuote(){
@@ -16,6 +23,8 @@ function getJSONAndLoadQuote(){
 
 // works
 function loadQuote(){
+
+  transitionColors();
 
   var randomQuoteIndex = Math.floor(Math.random() * (data.length));
   var randomQuote = data[randomQuoteIndex];
@@ -41,7 +50,26 @@ function retweetQuote(){
 
   var tweetString = "";
   tweetString += "https://twitter.com/intent/tweet?text=";
-  tweetString += encodeURIComponent(quoteGlobal + " - " + authorGlobal + " #randomQuoteMachine");
+  tweetString += encodeURIComponent(quoteGlobal + " " + authorGlobal + " #randomQuoteMachine");
 
   window.open(tweetString);
+}
+
+function transitionColors(){
+
+
+  var newColor = '#00FF00';
+
+  $(document.body).animate({backgroundColor: newColor}, 1000);
+  $("#authorText").animate({color: newColor}, 1000);
+  $("#quoteText").animate({color: newColor}, 1000);
+  $("#tweetButton").animate({borderTopColor: newColor, borderLeftColor: newColor, borderRightColor: newColor, borderBottomColor: newColor}, 1000);
+  $("#newQuoteButton").animate({borderTopColor: newColor, borderLeftColor: newColor, borderRightColor: newColor, borderBottomColor: newColor}, 1000);
+
+  $("#newQuoteButton").animate({color: newColor}, 1000);
+  
+}
+
+function getRandomColor(){
+
 }

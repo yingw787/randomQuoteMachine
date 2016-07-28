@@ -5,7 +5,7 @@ var authorGlobal = "";
 $(document).ready(function(){
   getJSONAndLoadQuote();
 
-
+  getRandomColor();
 
 });
 
@@ -58,7 +58,7 @@ function retweetQuote(){
 function transitionColors(){
 
 
-  var newColor = '#00FF00';
+  var newColor = getRandomColor();
 
   $(document.body).animate({backgroundColor: newColor}, 1000);
   $("#authorText").animate({color: newColor}, 1000);
@@ -67,9 +67,7 @@ function transitionColors(){
   $("#newQuoteButton").animate({borderTopColor: newColor, borderLeftColor: newColor, borderRightColor: newColor, borderBottomColor: newColor}, 1000);
 
   $("#newQuoteButton").animate({color: newColor}, 1000);
-  
-}
 
-function getRandomColor(){
+  // TODO: The Twitter icon still doesn't change color, don't know what to do about that
 
 }
